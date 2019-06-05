@@ -1,0 +1,26 @@
+零：安装环境
+Ubuntu18.04
+pyhton3.7
+
+第一步：安装依赖库
+$ sudo apt-get installbuild-essential
+$ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+$ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev # 处理图像所需的包
+$ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev liblapacke-dev
+$ sudo apt-get install libxvidcore-dev libx264-dev # 处理视频所需的包
+$ sudo apt-get install libatlas-base-dev gfortran # 优化opencv功能
+$ sudo apt-get install ffmpeg
+
+第二步：
+$  cd opencv3.3         # 注意版本
+$  mkdir build
+$  cd build
+# 注意路径，去除换行，连接至anaconda下环境的python
+cmake -D WITH_IPP=OFF -D PYTHON_DEFAULT_EXECUTABLE=/home/metachen/anaconda3/envs/pytorch/bin/python3 -D BUILD_opencv_python3=ON -D BUILD_opencv_python2=OFF -D PYTHON3_EXCUTABLE=/home/metachen/anaconda3/envs/pytorch/bin/python3 -D PYTHON3_INCLUDE_DIR=/home/metachen/anaconda3/envs/pytorch/include/python3.7m -D PYTHON3_LIBRARY=/home/metachen/anaconda3/envs/pytorch/lib/libpython3.7m.so.1.0 -D PYTHON_NUMPY_PATH=/home/metachen/anaconda3/envs/pytorch/lib/python3.7/site-packages ..
+..
+
+第三步：
+make -j4
+
+第四步：注意路径
+cp /home/naphid/Documents/opencv-3.3.0/build/lib/python3/* ~/Documents/anaconda3/lib/python3.6/site-packages/
