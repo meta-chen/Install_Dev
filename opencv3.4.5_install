@@ -23,4 +23,4 @@ cmake -D WITH_IPP=OFF -D PYTHON_DEFAULT_EXECUTABLE=/home/metachen/anaconda3/envs
 make -j4
 
 第四步：注意路径
-cp /home/naphid/Documents/opencv-3.3.0/build/lib/python3/* ~/Documents/anaconda3/lib/python3.6/site-packages/
+cp /home/metachen/opencv-3.3.0/build/lib/python3/* ~/anaconda3/lib/python3.6/site-packages/
