@@ -14,7 +14,9 @@ pyinstaller -c -i icon.ico main.py
 
 会新建一个dist目录，通过cmd进入后直接运行 main.exe ，通过控制台可以检查打包是否成功，
 
-![1567129056568](C:\Users\chenliang\AppData\Roaming\Typora\typora-user-images\1567129056568.png)
+```
+ModuleNotFoundError: No module named 'neobolt.bolt._io'
+```
 
 大概率会出现类似以上这种缺失模块的错误，需要在main.py同文件夹中寻找main.spec文件，打开后，将缺失模块添加到
 
