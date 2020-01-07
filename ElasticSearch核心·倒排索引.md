@@ -65,7 +65,7 @@ curl -X PUT "localhost:9200/user/_doc/1" -H 'Content-Type: application/json' -d'
 只要知道文档ID，就能快速找到文档。
 
 - [x] 可是，要怎样通过我们给定的关键词快速找到这个Term呢？
-- [ ] 不同字段中的相同Term怎么处理？
+- [x] 不同字段中的相同Term怎么处理？
 
 对于第一个疑问可以为Terms建索引然后使用 B-Tree索引（PS：MySQL就是B树索引最好的例子）。
 
@@ -80,4 +80,16 @@ curl -X PUT "localhost:9200/user/_doc/1" -H 'Content-Type: application/json' -d'
 我们查找Term的过程跟在MyISAM中记录ID的过程大致是一样的，MyISAM中，索引和数据是分开，通过索引可以找到记录的地址，进而可以找到这条记录。
 
 在倒排索引中，通过Term索引可以找到Term在Term Dictionary中的位置，进而找到Posting List，有了倒排列表就可以根据ID找到文档了。
+
+### 分词与标准化
+
+对于一个Field中的Term的提取，需要使用分词器，在分词后还需要进行标准化（Normolization）。
+
+分词任务之一是去除无语义字词。
+
+标准化的内容可以包括：大小写、单复数、同义词和时态等的处理，当然实际应用中更多的是需要根据业务指定标准化规则。
+
+实际上分词与标准化是一同进行的。包括三大部分：
+
+![1578390046165](pictures/1578390046165.png)
 
