@@ -184,6 +184,10 @@ index.search.slowlog.threshold.fetch.trace: 200ms
 
 使用**命令行**的方式向远程的服务通过http协议发送GET/POST请求，并获得来自远程服务器的反馈。
 
+##### 注意
+
+在es7.0以上版本中，使用CURL命令，由于取消了type类型，所以查询的时候，type对应字段由`_doc`替代。
+
 ##### 常用的参数
 
 | 参数 | 说明                                                       |
