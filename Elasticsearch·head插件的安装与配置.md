@@ -6,8 +6,8 @@
 
 https://nodejs.org/en/download/
 
-![img](E:\PycharmProjects\SomeTips\pictures\wlpvp63xq2.png)
-  
+![img](pictures\wlpvp63xq2.png)
+
 
 选择对应的版本，右键复制下载链接，进入linux目录，切换到要安装目录的磁盘。这里我们软件安装在/usr/local目录下，执行如下命令下载安装包
 

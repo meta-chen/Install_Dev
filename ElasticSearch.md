@@ -32,7 +32,7 @@ ELK（ElasticSearch、LogStash数据收集和日志解析引擎、Kibana分析�
 - **好：** / users / 12345
 - **差：** / api？type = user＆id = 23
 
-![img](E:\PycharmProjects\SomeTips\pictures\8871747-aec15633c4f81746.webp)
+![img](pictures\8871747-aec15633c4f81746.webp)
 
 ##### ES常用内置REST接口
 
